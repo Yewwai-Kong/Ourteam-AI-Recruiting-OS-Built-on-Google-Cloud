@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ourteam - AI-Powered Recruiting Platform</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a, #1a1a4a);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://via.placeholder.com/1920x1080/000022/ffffff?text=AI+Future') no-repeat center/cover;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 0 10px #00ffff;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00ffff; }
+            to { text-shadow: 0 0 20px #00ffff; }
+        }
+
+        p.intro {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        /* Cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #00ffff;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        .card h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        /* Google Cloud Integration Section */
+        #integration {
+            background: linear-gradient(135deg, #1a1a4a, #2a2a6a);
+        }
+
+        .integration-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .integration-list li {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .integration-list li::before {
+            content: '⚙️';
+            position: absolute;
+            left: 0;
+            color: #00ffff;
+        }
+
+        /* Roles */
+        #roles ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        #roles li {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        #roles li:hover {
+            background: rgba(0, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0a0a2a;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ourteam — Asia's Leading AI-Driven Recruiting Platform</h1>
+        <p class="intro">Redefining hiring in Asia: From weeks to hours. Join forces with top startups, corporates, and VCs to solve real-world problems with cutting-edge AI.</p>
+    </header>
+
+    <section id="about">
+        <h2>About Ourteam</h2>
+        <p>We use the most advanced artificial intelligence to redefine hiring in Asia, providing end-to-end automated recruiting solutions for top startups, enterprises, and investment firms, helping them quickly build teams for the future.</p>
+    </section>
+
+    <section id="advantages">
+        <h2>Core Advantages</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Precise Shortlisting in Hours</h3>
+                <p>AI automates screening, evaluation, and matching, replacing time-consuming manual resume reviews.</p>
+            </div>
+            <div class="card">
+                <h3>One-Stop Intelligent Assessment System</h3>
+                <p>Custom case studies, skills evaluations, culture fit surveys, structured interviews—all managed on-platform.</p>
+            </div>
+            <div class="card">
+                <h3>Personalized Branded Communication</h3>
+                <p>Automatically generate candidate emails tailored to your company's tone for every hiring stage.</p>
+            </div>
+            <div class="card">
+                <h3>Fully Compliant, Efficient, Scalable</h3>
+                <p>Automate from screening to offer, supporting teams from small to large enterprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="integration">
+        <h2>Deep Integration with Google Cloud</h2>
+        <p>Ourteam is fully built and powered by Google Cloud, ensuring scalability, security, and cutting-edge AI capabilities. Here's how we integrate:</p>
+        <ul class="integration-list">
+            <li>Vertex AI & Gemini Models: For intelligent resume screening, candidate ranking, and automated interview kit generation using Gemini 1.5 Pro and custom fine-tuned models.</li>
+            <li>BigQuery + Dataflow: Real-time hiring analytics and data pipelines for processing candidate data and insights.</li>
+            <li>Cloud Run, Cloud Functions, and Cloud Workflows: Scalable, serverless automation for workflows and operations.</li>
+            <li>Cloud Storage & Security Command Center: Enterprise-grade compliance (SOC2, GDPR, PDPA) with secure data handling.</li>
+            <li>Processing 500,000+ applications monthly on Google Cloud, achieving 40x faster shortlisting and 85% reduction in manual work.</li>
+        </ul>
+    </section>
+
+    <section id="roles">
+        <h2>Roles We're Hiring For</h2>
+        <ul>
+            <li>Conversational AI (Chatbots, LLM Prompt Engineering, API Integration)</li>
+            <li>Strategy & Operations (AI-Driven Strategic and Operational Optimization)</li>
+            <li>Growth Marketing (AI Personalized Growth Marketing)</li>
+            <li>Automating Workflows (Workflow Automation System Design)</li>
+            <li>Data Pipelines (Full Data Chain Building)</li>
+            <li>Product Design (Human-Machine Interaction and Intelligent System Design)</li>
+        </ul>
+        <p class="call-to-action">If you want to join Asia's best AI team and revolutionize hiring with AI, welcome to Ourteam. Shortlists generated in hours—let's build the future team together.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ourteam. All rights reserved. | <a href="https://ourteam.work">Visit Website</a> | Contact: <a href="mailto:yewwai@ourteam.work">yewwai@ourteam.work</a> | Location: Singapore</p>
+    </footer>
+
+</body>
+</html>
